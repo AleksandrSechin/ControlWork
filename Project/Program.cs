@@ -4,7 +4,7 @@
 // [“1234”, “1567”, “-2”, “computer science”] > [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] > []
 
-string[] oldArray = {"hi", "world", "goodbye", "day", "12345", "hello", "bye"};
+string[] oldArray = { "hi", "world", "goodbye", "day", "12345", "hello", "bye" };
 string[] newArray = new string[oldArray.Length];
 
 void CreateArray(string[] oldArray, string[] newArray)
@@ -12,12 +12,21 @@ void CreateArray(string[] oldArray, string[] newArray)
     int count = 0;
     for (int i = 0; i < oldArray.Length; i++)
     {
-    if(oldArray[i].Length < 4)
+        if (oldArray[i].Length < 4)
         {
-        newArray[count] = oldArray[i];
-        count++;
+            newArray[count] = oldArray[i];
+            count++;
         }
     }
 }
 
+void PrintArray(string[] newArray)
+{
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        Console.Write($"{newArray[i]} ");
+    }
+    Console.WriteLine();
+}
 CreateArray(oldArray, newArray);
+PrintArray(newArray);
